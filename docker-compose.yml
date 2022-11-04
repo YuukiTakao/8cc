@@ -1,0 +1,16 @@
+version: '3.9'
+
+volumes:
+  mystore:
+    driver: local
+
+services:
+  clang:
+    container_name: 9cc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ${PROJECT_PATH}:/projects/9cc:cached
