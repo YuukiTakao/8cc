@@ -5,4 +5,4 @@ WORKDIR /projects/9cc
 
 RUN apt-get update  && \
     apt-get upgrade && \
-    apt-get -y install build-essential vim man git
+    apt-get -y install gcc make git binutils libc6-dev
