@@ -7,7 +7,7 @@
 ## 動作環境としてdockerコンテナを準備する
 
 ### 前提
-- docker, docker-composeが動作する環境を用する
+- docker, docker-composeが動作する環境を用意する
 
 ### コンテナ起動手順
 1. `$ git clone git@github.com:YuukiTakao/9cc.git 9cc && cd 9cc`
