@@ -6,6 +6,10 @@ CFLAGS=-std=c11 -g -static
 test: 9cc
 	./test.sh
 
+.PHONY: test-debug
+test-debug:
+	bash -x test.sh
+
 .PHONY: clean
 clean:
 	rm -f 9cc *.o *~ tmp*

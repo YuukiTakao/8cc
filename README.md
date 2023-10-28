@@ -4,14 +4,16 @@
 
 上記を参考にCコンパイラを作成する
 
-
-## EBNF
+## EBNF (extended Backus–Naur form, Japan: 生成文法)
 
 ```
-expr    = mul ("+" mul | "-" mul)*
-mul     = unary ("*" unary | "/" unary)*
-unary   = ("+" | "-")? primary
-primary = num | "(" expr ")"
+expr       = equality
+equality   = relational ("==" relational | "!=" relational)*
+relational = add ("<" add | "<=" add | ">" add | ">=" add)*
+add        = mul ("+" mul | "-" mul)*
+mul        = unary ("*" unary | "/" unary)*
+unary      = ("+" | "-")? primary
+primary    = num | "(" expr ")"
 ```
 
 ### 記号の意味
